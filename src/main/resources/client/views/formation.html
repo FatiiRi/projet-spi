@@ -1,0 +1,42 @@
+<div ng-controller="FormationCtrl as formation">
+	<h2>Liste des formations</h2>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Code formation</th>
+				<th>Début Accréditation</th>
+				<th>Diplome</th>
+				<th>Double Diplome</th>
+				<th>Fin Accréditation</th>
+				<th>Numéro d'année</th>
+				<th>Nom formation</th>
+				<th>Suppression</th>
+				<th>Modfication</th>
+			</tr>
+		<tbody>
+			<tr ng-repeat="f in formations">
+				<td>{{f.codeFormation}}</td>
+				<td>{{f.debutAccreditation}}</td>
+				<td>{{f.diplome}}</td>
+				<td>{{f.doubleDiplome}}</td>
+				<td>{{f.finAccreditation}}</td>
+				<td>{{f.n0Annee}}</td>
+				<td>{{f.nomFormation}}</td>
+				<td>
+					<button type="button" class="btn btn-default">
+						<span class="glyphicon glyphicon-remove"></span>
+					</button>
+				</td>
+				<td>
+				<a ng-href="#/edit/{{f.codeFormation}}">
+					<button type="button" class="btn btn-default">
+						<span class="glyphicon glyphicon-pencil"></span>
+					</button>
+				</td>
+				<div ng-view></div>
+				</a>
+			</tr>
+		</tbody>
+		</thead>
+	</table>
+</div>
