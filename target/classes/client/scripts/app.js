@@ -12,6 +12,12 @@
         controller: 'FormationCtrl',
         controllerAs: 'formation'
       })
+      .when('/edit/:codeFormation',{
+    	  templateUrl: 'views/formationDetail.html',
+    	  controller: 'formationEditCtrl',
+    	  controllerAs: 'FormationEdit'
+    	  
+      })
       .otherwise({
         redirectTo: '/'
       });

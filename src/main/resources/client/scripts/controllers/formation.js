@@ -3,7 +3,7 @@
 
 
 angular.module('app')
-  .service('formationSvc', ['$http', function ($http) {
+  .service('FRMService', ['$http', function ($http) {
    this.fetchPopular = function(callback) {
    		var url = "http://localhost:8090/formation";
    		$http.get(url).then(function(response){
@@ -15,10 +15,10 @@ angular.module('app')
 
 
 angular.module('app')
-	  	.controller('FormationCtrl', ['$scope','formationSvc',function ($scope,formationSvc) {
+	  	.controller('FormationCtrl', ['$scope','FRMService',function ($scope,FRMService) {
 	    
 		$scope.formations=[];
-    	formationSvc.fetchPopular(function(data){
+    	FRMService.fetchPopular(function(data){
     			$scope.formations=data;
                 console.log(data);
     	})
