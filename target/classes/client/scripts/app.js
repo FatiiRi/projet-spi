@@ -18,6 +18,18 @@
     	  controllerAs: 'FormationEdit'
     	  
       })
+       .when('/delete/:codeFormation',{
+    	   templateUrl: 'views/deleteFormation.html',
+           controller: 'SupprimerFormation',
+           controllerAs: 'SupprimerFormation'
+    	  
+      })
+      
+      .when('/newFormation',{
+    	  templateUrl:'views/NewFormation.html',
+    	  controller: 'formationNewCtrl',
+    	  controllerAs: 'NewFormation'
+      })
       .otherwise({
         redirectTo: '/'
       });

@@ -19,10 +19,10 @@
         <!--[if lt IE 9]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+        
+        	
+	<div ng-view></div>
 
-		
-		<div ng-view></div>
-		
         <!-- build:js scripts/vendor.js -->
         <script src="bower_components/jquery/dist/jquery.min.js"></script>
         <script src="bower_components/angular/angular.min.js"></script>
@@ -60,10 +60,10 @@
 
         <!-- build:js({.tmp,client}) scripts/app.js -->
         <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/formation.js"></script>
-        <script src="scripts/controllers/formationEditCtrl.js"></script>
-        
+        	<script src="scripts/controllers/formation.js"></script>
+	<script src="scripts/controllers/formationEditCtrl.js"></script>
+	<script src="scripts/controllers/formationNewCtrl.js"></script>
+	<script src="scripts/controllers/SupprimerFormation.js"></script>
         <!-- endbuild -->
-		
     </body>
 </html>

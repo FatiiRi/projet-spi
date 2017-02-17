@@ -1,7 +1,4 @@
 'use strict';
-
-
-
 angular.module('app')
   .service('FRMService', ['$http', function ($http) {
    this.fetchPopular = function(callback) {
@@ -9,11 +6,8 @@ angular.module('app')
    		$http.get(url).then(function(response){
    			callback(response.data);
    		});
-   };
-
+   };  
   }]);
-
-
 angular.module('app')
 	  	.controller('FormationCtrl', ['$scope','FRMService',function ($scope,FRMService) {
 	    
@@ -21,5 +15,7 @@ angular.module('app')
     	FRMService.fetchPopular(function(data){
     			$scope.formations=data;
                 console.log(data);
-    	})
+    	});
+    	
+    	
  	  }]);

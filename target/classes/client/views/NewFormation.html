@@ -1,0 +1,48 @@
+<div class="container">
+<div ng-controller="formationNewCtrl">
+	<h2>Ajoutez une nouvelle formation</h2>
+	<form ng-submit="ajouterNouvelleFormation()">
+		<div class="form-group">
+			<label>Code formation:</label> 
+			<input  ng-model="formation.codeFormation" type="text" class="form-control" id="codeFormation" placeholder="Entrer le code">
+		</div>
+		<div class="form-group">
+			<label>Début accréditation:</label>
+			<input  ng-model="formation.debutAccreditation" type="date" class="form-control" id="debutAccreditation" placeholder="">
+		</div>
+		<div class="form-group">
+			<label>Diplôme L/M/D:</label>
+			<input  ng-model="formation.diplome" type="text" class="form-control" id="diplome" placeholder="diplome">
+		</div>
+		
+
+		<div class="form-group">
+			<label>Double diplôme O/N:</label>
+			<input ng-model="formation.doubleDiplome" type="text" class="form-control" id="doubleDiplome" placeholder="Saisisez le nom">
+		</div>
+		
+
+		<div class="form-group">
+			<label>Fin accréditation:</label>
+			<input  ng-model="formation.finAccreditation" type="date" class="form-control" id="finAccreditation" placeholder="">
+		</div>
+
+		<div class="form-group">
+			<label>Numéro d'année:</label>
+			<input  ng-model="formation.n0Annee" type="text" class="form-control" id="n0Annee" placeholder="">
+		</div>
+
+		<div class="form-group">
+			<label>Nom formation:</label>
+			<input ng-model="formation.nomFormation" type="text" class="form-control" id="nomFormation" placeholder="Saisisez le nom">
+		</div>
+			<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<input type="submit" text="ajouter" class="btn btn-primary"></input>
+
+						</div>
+		
+					</div>
+	</form>
+</div>
+</div>

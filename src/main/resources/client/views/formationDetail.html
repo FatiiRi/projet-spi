@@ -1,15 +1,70 @@
-<div>
-<p>Je suis dans les dÈtails de la formation </p>
-<h1>{{formation.nomFormation}}</h1>
-<ul>
-<li>Code Formation :{{formation.codeFormation}}  </li>
-<li>DÈbut formation : {{formation.debutAccreditation}}</li>
-<li>DiplÙme : {{formation.diplome}} </li>
-<li>Double diplÙme : {{formation.doubleDiplome}} </li>
-<li>Fin AccrÈditation : {{f.finAccreditation}}</li>
-<li>NumÈro d'annÈe : {{formation.n0Annee}} </li>
-<li>Nom formation : {{f.nomFormation}} </li>
-<li></li>
-</ul>
-</div>
+<div class="container">
+<div ng-controller="formationEditCtrl">
+	
+	<h1>{{formation.nomFormation}}</h1>
+	<ul>
+		<li>Code Formation :{{formation.codeFormation}}</li>
+		<li>D√©but formation : {{formation.debutAccreditation}}</li>
+		<li>Dipl√¥me : {{formation.diplome}}</li>
+		<li>Double dipl√¥me : {{formation.doubleDiplome}}</li>
+		<li>Fin Accr√©ditation : {{formation.finAccreditation}}</li>
+		<li>Num√©ro d'ann√©e : {{formation.n0Annee}}</li>
+		<li>Nom formation : {{formation.nomFormation}}</li>
+	</ul>
+	
+	
+	
+	<h2>Modifier la formation</h2>
+	<h3>Saisisez les champs a modifier!</h3>
+	<form ng-submit="updateFormation()">
+		<div class="form-group">
+			<label>Code formation:</label> 
+			<input  ng-model="formation2.codeFormation" type="text" class="form-control"
+			 placeholder={{formation.codeFormation}}>
+		</div>
+		<div class="form-group">
+			<label>D√©but accr√©ditation:</label>
+			<input  ng-model="formation2.debutAccreditation" type="text" class="form-control"
+			placeholder="{{formation.debutAccreditation}}">
+		</div>
+		<div class="form-group">
+			<label>Dipl√¥me L/M/D:</label>
+			<input  ng-model="formation2.diplome" type="text" class="form-control" id="diplome" 
+			placeholder="{{formation.diplome}}">
+		</div>
+		
 
+		<div class="form-group">
+			<label>Double dipl√¥me O/N:</label>
+			<input ng-model="formation2.doubleDiplome" type="text" class="form-control"
+			placeholder="{{formation.doubleDiplome}}">
+		</div>
+		
+
+		<div class="form-group">
+			<label>Fin accr√©ditation:</label>
+			<input  ng-model="formation2.finAccreditation" type="text" class="form-control"
+			placeholder="{{formation.finAccreditation}}">
+		</div>
+
+		<div class="form-group">
+			<label>Num√©ro d'ann√©e:</label>
+			<input  ng-model="formation2.n0Annee" type="text" class="form-control" 
+			placeholder="{{formation.n0Annee}}">
+		</div>
+
+		<div class="form-group">
+			<label>Nom formation:</label>
+			<input ng-model="formation2.nomFormation" type="text" class="form-control"
+			placeholder="{{formation.nomFormation}}">
+		</div>
+			<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<input type="submit" text="ajouter" class="btn btn-primary"></input>
+
+						</div>
+		
+					</div>
+	</form>
+</div>
+</div>

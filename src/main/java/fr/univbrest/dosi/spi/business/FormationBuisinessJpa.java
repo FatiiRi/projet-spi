@@ -24,26 +24,31 @@ public class FormationBuisinessJpa implements FormationBusiness{
 	this.formationRepo = formationRepo;
 }
 
+ @Override
 public void créerFormation(Formation f){
 		
 		formationRepo.save(f);	
 	}
 	
+ @Override
 	public List<Formation> listerFormations(){
 		return (List<Formation>) formationRepo.findAll();
 		
 	}
 	
+ @Override
 	public Long CompterFormations(){
 		return formationRepo.count();
 		
 	}
 	
+ @Override
 	public void supprimerFormation(Formation f){
 		formationRepo.delete(f);
 		
 	}
 	
+ @Override
 	public Formation trouverFormation(String code){
 		return formationRepo.findOne(code);
 		
@@ -53,6 +58,12 @@ public void créerFormation(Formation f){
 	public List<Formation> troverFormationParNom(String nom) {
 		
 		return formationRepo.findByNomFormation(nom);
+	}
+
+	@Override
+	public void updateFromation(Formation f) {
+		formationRepo.save(f);
+		
 	}
 
 }

@@ -7,6 +7,7 @@ import fr.univbrest.dosi.spi.bean.Formation;
 public interface FormationBusiness {
 
 	 void créerFormation(Formation f);
+	 void updateFromation(Formation f);
 	 List<Formation> listerFormations();
 	 Long CompterFormations();
 	 void supprimerFormation(Formation f);
