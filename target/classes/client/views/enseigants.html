@@ -1,0 +1,39 @@
+<div ng-controller="enseignantsCtrl">
+	<h2>Liste des Enseignants</h2>
+		
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>N°</th>
+				<th>Nom et Prénom</th>
+				<th>Sexe</th>
+				<th>Pays</th>
+				<th>Adresse</th>
+				<th>Diplôme</th>
+				<th>Code postal</th>
+				<th>Email perso</th>
+				<th>Email Ubo</th>
+				<th>Telephone</th>
+				<th>Type</th>
+				<th>Ville</th>
+			</tr>
+		<tbody>
+			<tr ng-repeat="e in enseignants">
+				<td>{{e.noEnseignant}}</td>
+				<td>{{e.nom}} {{e.prenom}}</td>
+				<td>{{e.sexe}}</td>
+				<td>{{e.pays}}</td>
+				<td>{{e.adresse}}</td>
+				<td>{{e.diplome}}</td>
+				<td>{{e.codePostal}}</td>
+				<td>{{e.emailPerso}}</td>
+				<td>{{e.emailUbo}}</td>
+				<td>{{e.telephone}}</td>
+				<td>{{e.type}}</td>
+				<td>{{e.ville}}</td>
+	
+			</tr>
+		</tbody>
+		</thead>
+	</table>
+</div>

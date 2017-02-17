@@ -17,11 +17,6 @@ angular.module('app')
 				$location.path('/formation');
 			}
 		)
-		/*
-		request.error(function(data, status, headers, config) {
-			console.log("error");
-			console.log("erreur"+ data);
-		})*/
 	};
 
 }]);

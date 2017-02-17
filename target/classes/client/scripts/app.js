@@ -30,6 +30,20 @@
     	  controller: 'formationNewCtrl',
     	  controllerAs: 'NewFormation'
       })
+      
+        .when('/dashboard',{
+    	   templateUrl: 'views/dashboard.html',
+           controller: 'dashboardCtrl',
+           controllerAs: 'dashboard'
+    	  
+      })
+      
+        .when('/enseignants',{
+    	   templateUrl: 'views/enseigants.html',
+           controller: 'enseignantsCtrl',
+           controllerAs: 'enseignants'
+    	  
+      })
       .otherwise({
         redirectTo: '/'
       });
